@@ -18,7 +18,7 @@ public class TestController {
         TestDTO testDTO=new TestDTO();
         testDTO.setAd("eray");
         testDTO.setSoyad("k");
-        testDTO.setEmail("ananas@ananas.coım");
+        testDTO.setEmail("ananas@ananas.com");
 
         System.out.println(principal.getName());
 
