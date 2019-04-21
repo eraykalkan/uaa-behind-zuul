@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: auth-service
+
+# Define the port where the UAA server would be running
+server:
+  port: 9000
+  # Use different context-path to avoid session cookie overlapping
+  servlet:
+    context-path: /uaa
+  use-forward-headers: false
+
+
+---
+spring:
+  profiles: docker
+
+server:
+  port: ${SERVICE_PORT}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${REGISTRY_URL}
